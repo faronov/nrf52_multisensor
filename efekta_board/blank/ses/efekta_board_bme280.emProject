@@ -1,6 +1,6 @@
 <!DOCTYPE CrossStudio_Project_File>
-<solution Name="zigbee_multi_sensor_pca10056" target="8" version="2">
-  <project Name="zigbee_multi_sensor_pca10056">
+<solution Name="efekta_board_bme280" target="8" version="2">
+  <project Name="efekta_board_bme280">
     <configuration
       Name="Common"
       arm_architecture="v7EM"
@@ -15,7 +15,7 @@
       arm_simulator_memory_simulation_parameter="RWX 00000000,00100000,FFFFFFFF;RWX 20000000,00010000,CDCDCDCD"
       arm_target_device_name="nRF52840_xxAA"
       arm_target_interface_type="SWD"
-      c_preprocessor_definitions="BOARD_PCA10056;CONFIG_GPIO_AS_PINRESET;ENABLE_FEM;FLOAT_ABI_HARD;INITIALIZE_USER_SECTIONS;NO_VTOR_CONFIG;NRF52840_XXAA;SWI_DISABLE0;ZB_ED_ROLE;ZB_TRACE_LEVEL=0;ZB_TRACE_MASK=0;"
+      c_preprocessor_definitions="BOARD_CUSTOM;CONFIG_NFCT_PINS_AS_GPIOS;ENABLE_FEM;FLOAT_ABI_HARD;INITIALIZE_USER_SECTIONS;NO_VTOR_CONFIG;NRF52840_XXAA;SWI_DISABLE0;ZB_ED_ROLE;ZB_TRACE_LEVEL=0;ZB_TRACE_MASK=0"
       c_user_include_directories="../../../config;../../../../../../../components;../../../../../../../components/boards;../../../../../../../components/drivers_nrf/nrf_soc_nosd;../../../../../../../components/libraries/atomic;../../../../../../../components/libraries/balloc;../../../../../../../components/libraries/bsp;../../../../../../../components/libraries/button;../../../../../../../components/libraries/delay;../../../../../../../components/libraries/experimental_section_vars;../../../../../../../components/libraries/fstorage;../../../../../../../components/libraries/log;../../../../../../../components/libraries/log/src;../../../../../../../components/libraries/memobj;../../../../../../../components/libraries/mutex;../../../../../../../components/libraries/pwr_mgmt;../../../../../../../components/libraries/queue;../../../../../../../components/libraries/ringbuf;../../../../../../../components/libraries/scheduler;../../../../../../../components/libraries/sensorsim;../../../../../../../components/libraries/strerror;../../../../../../../components/libraries/timer;../../../../../../../components/libraries/util;../../../../../../../components/toolchain/cmsis/include;../../../../../../../components/zigbee/common;../../../../../../../components/zigbee/pressure_cluster;../../..;../../../../../../../external/fprintf;../../../../../../../external/nRF-IEEE-802.15.4-radio-driver/src;../../../../../../../external/nRF-IEEE-802.15.4-radio-driver/src/fem;../../../../../../../external/nRF-IEEE-802.15.4-radio-driver/src/mac_features;../../../../../../../external/nRF-IEEE-802.15.4-radio-driver/src/mac_features/ack_generator;../../../../../../../external/nRF-IEEE-802.15.4-radio-driver/src/rsch;../../../../../../../external/zboss/addons;../../../../../../../external/zboss/include;../../../../../../../external/zboss/include/ha;../../../../../../../external/zboss/include/osif;../../../../../../../external/zboss/include/zcl;../../../../../../../external/zboss/osif;../../../../../../../external/zboss/zb_error;../../../../../../../integration/nrfx;../../../../../../../integration/nrfx/legacy;../../../../../../../modules/nrfx;../../../../../../../modules/nrfx/drivers/include;../../../../../../../modules/nrfx/hal;../../../../../../../modules/nrfx/mdk;../config;"
       debug_register_definition_file="../../../../../../../modules/nrfx/mdk/nrf52840.svd"
       debug_start_from_entry_point_symbol="No"

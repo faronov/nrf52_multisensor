@@ -35,7 +35,7 @@
 
 #include "BME280.h"
 
-#define BME280_ADDRESS_1  0x76
+#define BME280_ADDRESS_1  0x77
 
 #define BME280_ID         0xD0
 
@@ -180,7 +180,7 @@ void BME280_Get_Data(int32_t * resultPTH)
 }  
 
 // Returns humidity in %RH as unsigned 32 bit integer in Q22.10 format (22integer and 10fractional bits).
-// Output value of “47445”represents 47445/1024= 46.333%RH
+// Output value of 47445represents 47445/1024= 46.333%RH
 uint32_t BME280_Compensate_H(int32_t adc_H, int32_t t_fine)
 {
   int32_t varH;
@@ -195,7 +195,7 @@ uint32_t BME280_Compensate_H(int32_t adc_H, int32_t t_fine)
 }
 
 // Returns temperature in DegC, resolution is 0.01 DegC. Output value of
-// “5123” equals 51.23 DegC.
+// 5123 equals 51.23 DegC.
 int32_t BME280_Compensate_T(int32_t t_fine)
 {
   int32_t T;
@@ -206,7 +206,7 @@ int32_t BME280_Compensate_T(int32_t t_fine)
   return T;
 }
 
-// Returns pressure in Pa as unsigned 32 bit integer. Output value of “96386” equals 96386 Pa = 963.86 hPa
+// Returns pressure in Pa as unsigned 32 bit integer. Output value of 96386 equals 96386 Pa = 963.86 hPa
 uint32_t BME280_Compensate_P(int32_t adc_P, int32_t t_fine) 
 {
     varP1 = (t_fine>>1) - (int32_t)64000;

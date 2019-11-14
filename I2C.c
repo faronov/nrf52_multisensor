@@ -18,8 +18,9 @@ void I2C_init(void)
 
     const nrf_drv_twi_config_t i2c_config = 
     {
-       .scl                = 26,
-       .sda                = 27,
+
+       .scl                = 31,
+       .sda                = 30,
        .frequency          = NRF_DRV_TWI_FREQ_100K,
        .interrupt_priority = APP_IRQ_PRIORITY_HIGH,
        .clear_bus_init     = false

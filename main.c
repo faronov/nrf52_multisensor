@@ -59,17 +59,18 @@
 
 #include "zb_multi_sensor.h"
 #include "nrf_802154.h"
+
+
 /* I2c library */
 #include "I2C.h"
 #include "BME280.h"
 #include "ADC.h"
 
-#define IEEE_CHANNEL_MASK                  ZB_TRANSCEIVER_ALL_CHANNELS_MASK     /**< Scan all channel to find the coordinator. */
-#define ERASE_PERSISTENT_CONFIG            ZB_FALSE                             /**< Do not erase NVRAM to save the network parameters after device reboot or power-off. */
-
-#define ZIGBEE_NETWORK_STATE_LED           BSP_BOARD_LED_0                      /**< LED indicating that light switch successfully joind ZigBee network. */
-#define LEAVE_JOIN_BUTTON                  BSP_BOARD_BUTTON_0                   /**< Button ID used to join to network and leave from network*/
-#define LEAVE_JOIN_BUTTON_THRESHOLD        ZB_TIME_ONE_SECOND*4                      /**< Number of beacon intervals the button should be pressed to dimm the light bulb. */
+#define IEEE_CHANNEL_MASK                  ZB_TRANSCEIVER_ALL_CHANNELS_MASK        /**< Scan all channel to find the coordinator. */
+#define ERASE_PERSISTENT_CONFIG            ZB_FALSE                                /**< Do not erase NVRAM to save the network parameters after device reboot or power-off. */
+#define ZIGBEE_NETWORK_STATE_LED           BSP_BOARD_LED_0                               /**< LED indicating that light switch successfully joind ZigBee network. */
+#define LEAVE_JOIN_BUTTON                  BSP_BOARD_BUTTON_0                            /**< Button ID used to join to network and leave from network*/
+#define LEAVE_JOIN_BUTTON_THRESHOLD        ZB_TIME_ONE_SECOND*4                    /**< Number of beacon intervals the button should be pressed to dimm the light bulb. */
 #define LEAVE_JOIN_BUTTON_SHORT_POLL_TMO   ZB_MILLISECONDS_TO_BEACON_INTERVAL(50)  /**< Delay between button state checks used in order to detect button long press. */
 #define LEAVE_JOIN_BUTTON_LONG_POLL_TMO    ZB_MILLISECONDS_TO_BEACON_INTERVAL(300) /**< Time after which the button state is checked again to detect button hold - the dimm command is sent again. */
 #define LED_BLINK                          ZB_MILLISECONDS_TO_BEACON_INTERVAL(100) /**< Led on-off timeout. */
@@ -81,6 +82,7 @@ static zb_time_t timestamp;
 /* --------- BME280--------*/
 static int32_t  resultPTH[3];
 /* ----------------------- */
+
 #if !defined ZB_ED_ROLE
 #error Define ZB_ED_ROLE to compile End Device source code.
 #endif
